@@ -4,6 +4,7 @@ const connection = new signalR.HubConnectionBuilder()
         // reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
         // we use gateway, so just disable it
         withCredentials: false,
+        accessTokenFactory: () => "put token here",
     })
     .configureLogging(signalR.LogLevel.Information)
     .build();

@@ -25,7 +25,6 @@ namespace SignalR_Demo.Controllers
         public IActionResult SendExportMessage([FromQuery] string userIdentifier)
         {
             // userIdentifier will not work until Authentication and Authorization are configurated
-            // use debugger to know exactly what next to configurate for JWT token.
             if (userIdentifier == null)
                 _hubContext.Clients.All.ReceiveExport("Your file is ready.");
             else
